@@ -5,29 +5,163 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | My Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== Index Page (Landing) Styles ===== */
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #fff;
+  color: #4e54c8;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: #f1f1f1;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  flex: 1 1 250px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.feature-box:hover {
+  transform: translateY(-8px);
+}
+
+.feature-box h3 {
+  margin-bottom: 1rem;
+  color: #4e54c8;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .features {
+    gap: 1.5rem;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 0.95rem;
+  }
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature-box {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+  .hero .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+  </style>
 </head>
 <body>
   <header>
     <nav>
-      <h1>My Portfolio</h1>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main id="home" class="section">
-  <h2>Welcome 👋</h2>
-  <p>Hi, I'm Mahesh. I design and build web applications with creativity, inclusivity, and respect.</p>
-  <a href="projects.html" class="btn">See My Work</a>
-  </main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Hi, I'm Nage 👋</h1>
+    <p>Welcome to my portfolio. I build full-stack apps with Java, JSP, MySQL, and modern web technologies.</p>
+    <a href="projects.html" class="btn">View My Work</a>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-box">
+      <h3>🚀 Projects</h3>
+      <p>Explore my hands-on projects and real-world applications.</p>
+    </div>
+    <div class="feature-box">
+      <h3>🛠 Skills</h3>
+      <p>Check out the technologies I use to solve problems.</p>
+    </div>
+    <div class="feature-box">
+      <h3>📩 Contact</h3>
+      <p>Let’s connect and collaborate on something amazing!</p>
+    </div>
+  </section>
 
   <footer>
-    <p>
-      <a href="" target=""></a>.
+    <p>Respect & Inclusivity: This site follows the 
+      <a href="https://mlh.io/code-of-conduct" target="_blank">MLH Code of Conduct</a>.
     </p>
   </footer>
 </body>
